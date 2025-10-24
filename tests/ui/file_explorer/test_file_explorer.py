@@ -4,7 +4,7 @@ default_page_size = 25
 # Popups appear for table filtering
 # Context menus appear for right-click actions on files/folders
 
-def test_FE_can_view_all_files():
+def test_FE_can_view_all_files(env):
     # open browser
     # navigate to file explorer (can be direct URL or via Home Page UI -> Menu -> File Explorer)
     # Verify page is loaded (check for specific element such as title)
@@ -15,20 +15,20 @@ def test_FE_can_view_all_files():
     # Extract from UI the current pagination state (page number, page size)
     # Assert that the expected representation matches the UI representation
 
-def test_FE_pagination():
+def test_FE_pagination(env):
     # Similar to above test, but focus on verifying pagination controls work correctly
     # There should be a verification that the database contains suficient rows to require pagination
     # The test should verify contents of first page
     # Then navigate to next page and verify contents again
     # Finally, navigate back to first page and verify contents again
 
-def test_FE_pagination_with_sorting():
+def test_FE_pagination_with_sorting(env):
     # Similar to pagination test, but add sorting into the mix
     # Verify that sorting by first column works correctly for first page
     # Navigate to next page and verify sorting is still correct
     # Navigate back to first page and verify sorting is still correct
 
-def test_FE_file_upload():
+def test_FE_file_upload(env):
     # Test file upload functionality:
     # Retrieve current number of files in DB
     # Sort table by most recently added file
